@@ -1,0 +1,29 @@
+pipeline {
+  agent{
+  node{
+      label "my_pc"
+      }
+}
+triggers{
+  pollSCM"****"
+}
+stages{
+  stage('Build'){
+  stages{
+    echo"Building..."
+}
+}
+
+  stage('Test'){
+  stages{
+    echo"Testing..."
+}
+}
+
+  stage('Deliver'){
+  stages{
+    echo"Delivery..."
+}
+}
+}
+}
